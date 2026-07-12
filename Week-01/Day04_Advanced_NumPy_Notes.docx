@@ -1,0 +1,50 @@
+Advanced NumPy
+copy() vs view()
+copy() creates an independent copy. Changes do not affect the original.
+view() shares memory with the original. Changes affect both arrays.
+np.where()
+Conditional operation.
+Syntax: np.where(condition, true_value, false_value)
+Example: np.where(arr>25,100,arr)
+np.any() and np.all()
+any() returns True if at least one value satisfies the condition.
+all() returns True only if every value satisfies the condition.
+np.unique()
+Removes duplicate values.
+Example: np.unique([10,20,20,30]) -> [10 20 30]
+sort() vs argsort()
+sort() returns sorted values.
+argsort() returns indexes that would sort the array.
+concatenate()
+Combines arrays into one array.
+vstack()
+Stacks arrays vertically (row-wise).
+hstack()
+Stacks arrays horizontally (column-wise for 1D arrays).
+split()
+Splits an array into equal parts.
+Real AI Usage
+where() for label creation, unique() for categories, concatenate()/stack() for merging datasets, split() for batch processing.
+Common Mistakes
+copy() != view(). argsort() returns indexes, not values. where() can preserve original values by using arr as the false condition.
+Interview Questions
+1. copy vs view?
+2. any vs all?
+3. sort vs argsort?
+4. Why unique in ML?
+5. concatenate vs vstack vs hstack?
+Cheat Sheet
+copy() -> Copy
+view() -> Shared memory
+where() -> Conditional
+any() -> At least one
+all() -> All
+unique() -> Remove duplicates
+sort() -> Sorted values
+argsort() -> Sorted indexes
+concatenate() -> Join arrays
+vstack() -> Vertical
+hstack() -> Horizontal
+split() -> Divide array
+What I Learned
+copy(), view(), where(), any(), all(), unique(), sort(), argsort(), concatenate(), vstack(), hstack(), split()
