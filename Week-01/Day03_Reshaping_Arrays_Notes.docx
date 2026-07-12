@@ -1,0 +1,84 @@
+NumPy - Reshaping Arrays & Array Creation
+1. Why Reshape?
+Reshaping changes the dimensions of an array without changing its data. It is heavily used in Machine Learning, Deep Learning and Computer Vision.
+
+Example:
+arr=np.arange(1,7)
+arr.reshape(2,3)
+Output:
+[[1 2 3]
+ [4 5 6]]
+2. reshape()
+Syntax: array.reshape(rows, columns)
+
+Rules:
+• Total number of elements must remain the same.
+• Valid: 12 elements -> (3,4), (2,6), (6,2).
+• Invalid shapes raise an error.
+3. reshape(-1)
+NumPy automatically calculates the missing dimension.
+Example:
+arr.reshape(2,-1)
+arr.reshape(-1,4)
+4. flatten()
+Converts a multi-dimensional array into a 1D array.
+Returns a COPY.
+5. ravel()
+Similar to flatten(), but usually returns a VIEW instead of a copy.
+6. transpose()
+Rows become columns and columns become rows.
+Use A.T or A.transpose().
+7. Creating Arrays
+np.zeros((2,3)) -> all zeros
+np.ones((3,2)) -> all ones
+np.eye(3) -> identity matrix
+8. arange()
+Creates numbers in a range.
+Example: np.arange(10,51)
+Last value is excluded.
+9. linspace()
+Creates evenly spaced numbers.
+Example: np.linspace(0,1,6)
+Difference:
+arange() -> step based
+linspace() -> number of values based.
+10. Random Numbers
+np.random.rand(3) -> random decimals
+np.random.randint(1,101,10) -> 10 random integers
+11. Common Mistakes
+❌ reshape(5,3) on 12 elements.
+✔ reshape(3,4)
+
+❌ Confusing transpose with reverse.
+
+❌ Using rand() when integers are required.
+12. Interview Questions
+1. What is reshape()?
+2. Difference between flatten() and ravel()?
+3. Why reshape(-1)?
+4. Difference between arange() and linspace()?
+5. What is an identity matrix?
+13. Cheat Sheet
+reshape() -> Change shape
+flatten() -> Copy
+ravel() -> View
+T -> Transpose
+zeros() -> Zeros
+ones() -> Ones
+eye() -> Identity Matrix
+arange() -> Range
+linspace() -> Even spacing
+rand() -> Decimal random
+randint() -> Integer random
+14. What I Learned Today
+✓ reshape()
+✓ reshape(-1)
+✓ flatten()
+✓ ravel()
+✓ transpose()
+✓ zeros()
+✓ ones()
+✓ eye()
+✓ arange()
+✓ linspace()
+✓ random numbers
