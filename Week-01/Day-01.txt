@@ -1,0 +1,330 @@
+AI Bootcamp - Day 1 Notes
+
+Module 1: NumPy Fundamentals
+
+What is NumPy?
+
+NumPy (Numerical Python) is a Python library used for fast numerical and
+mathematical computations. It is the foundation of: - Machine Learning -
+Deep Learning - Data Science - Artificial Intelligence - Computer Vision
+
+------------------------------------------------------------------------
+
+Why NumPy?
+
+Python lists are flexible but slower for numerical computations.
+
+Example using a Python list:
+
+    marks = [80, 90, 70]
+
+    new_marks = []
+    for mark in marks:
+        new_marks.append(mark + 5)
+
+    print(new_marks)
+
+Output:
+
+    [85, 95, 75]
+
+Using NumPy:
+
+    import numpy as np
+
+    marks = np.array([80, 90, 70])
+
+    print(marks + 5)
+
+Output:
+
+    [85 95 75]
+
+Why is NumPy Faster?
+
+-   Stores data in continuous memory
+-   Uses optimized C code internally
+-   Supports vectorized operations
+-   Uses less memory than Python lists
+
+------------------------------------------------------------------------
+
+Importing NumPy
+
+    import numpy as np
+
+np is the standard alias.
+
+------------------------------------------------------------------------
+
+Creating Arrays
+
+1D Array
+
+    arr = np.array([1,2,3,4,5])
+
+2D Array
+
+    matrix = np.array([
+        [1,2,3],
+        [4,5,6]
+    ])
+
+------------------------------------------------------------------------
+
+Array Properties
+
+shape
+
+Returns the dimensions of an array.
+
+    arr.shape
+    matrix.shape
+
+Example Output:
+
+    (5,)
+    (2,3)
+
+ndim
+
+Returns the number of dimensions.
+
+    arr.ndim
+    matrix.ndim
+
+Output:
+
+    1
+    2
+
+size
+
+Returns total number of elements.
+
+    arr.size
+
+dtype
+
+Returns the datatype.
+
+    arr.dtype
+
+Possible Output:
+
+    int32
+    or
+    int64
+
+------------------------------------------------------------------------
+
+Indexing
+
+Python starts indexing from 0.
+
+    arr = np.array([10,20,30,40,50])
+
+    arr[0]
+    arr[-1]
+
+Output:
+
+    10
+    50
+
+Negative indexing starts from the end.
+
+------------------------------------------------------------------------
+
+Slicing
+
+Syntax:
+
+    arr[start:stop]
+
+Important Rule:
+
+Start index is INCLUDED. Stop index is EXCLUDED.
+
+Example:
+
+    arr[0:3]
+
+Output:
+
+    [10 20 30]
+
+Reverse Array:
+
+    arr[::-1]
+
+Every Second Element:
+
+    arr[::2]
+
+------------------------------------------------------------------------
+
+Vectorized Operations
+
+    arr = np.array([1,2,3])
+
+    arr + 10
+    arr * 2
+    arr ** 2
+    arr ** 3
+
+Outputs:
+
+    [11 12 13]
+    [2 4 6]
+    [1 4 9]
+    [1 8 27]
+
+------------------------------------------------------------------------
+
+Boolean Comparisons
+
+    arr = np.array([2,4,6,8,10])
+
+    arr > 5
+    arr <= 6
+
+Output:
+
+    [False False True True True]
+    [ True  True  True False False]
+
+------------------------------------------------------------------------
+
+Boolean Indexing
+
+Select values using conditions.
+
+    arr[arr > 5]
+
+Odd Numbers:
+
+    arr[arr % 2 != 0]
+
+Even Numbers:
+
+    arr[arr % 2 == 0]
+
+Numbers divisible by 5:
+
+    arr[arr % 5 == 0]
+
+Numbers between 10 and 25:
+
+    arr[(arr >= 10) & (arr <= 25)]
+
+Use ‘&’ for AND.
+
+------------------------------------------------------------------------
+
+Replace Values
+
+    arr = np.array([5,10,15,20,25,30])
+
+    new_arr = arr.copy()
+    new_arr[new_arr > 20] = 100
+
+Output:
+
+    [5 10 15 20 100 100]
+
+------------------------------------------------------------------------
+
+Useful NumPy Functions
+
+    arr.sum()
+    arr.mean()
+    arr.max()
+    arr.min()
+    arr.std()
+
+------------------------------------------------------------------------
+
+max() vs argmax()
+
+    arr.max()
+
+Returns the maximum VALUE.
+
+    arr.argmax()
+
+Returns the INDEX of the maximum value.
+
+Similarly:
+
+    arr.min()
+    arr.argmin()
+
+------------------------------------------------------------------------
+
+Common Mistakes
+
+Wrong:
+
+    arr[arr.max()]
+
+Correct:
+
+    arr.max()
+
+Wrong:
+
+    arr * 2
+
+Thinking it calculates the square.
+
+Correct:
+
+    arr ** 2
+
+Wrong:
+
+    arr[arr % 2]
+
+Correct:
+
+    arr[arr % 2 == 0]
+
+------------------------------------------------------------------------
+
+Key Takeaways
+
+-   NumPy is built for numerical computing.
+-   Arrays are faster than Python lists.
+-   Indexing starts from 0.
+-   Start index is included; stop index is excluded.
+-   Vectorized operations avoid explicit loops.
+-   Boolean indexing is essential for filtering data.
+-   Use copy() before modifying an array if you want to preserve the
+    original.
+-   max() returns a value; argmax() returns an index.
+
+------------------------------------------------------------------------
+
+What I Learned Today
+
+-   NumPy arrays
+-   Array properties
+-   Indexing
+-   Slicing
+-   Vectorized operations
+-   Boolean indexing
+-   Statistical functions
+
+------------------------------------------------------------------------
+
+Things to Remember
+
+-   Start Included, Stop Excluded.
+-   ** is for powers.
+-   & combines multiple conditions.
+-   max() gives the value.
+-   argmax() gives the index.
+
+------------------------------------------------------------------------
+
