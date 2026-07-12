@@ -1,0 +1,72 @@
+1. Broadcasting
+Broadcasting allows NumPy to perform arithmetic between arrays of different but compatible shapes. A scalar is virtually expanded across all elements without actually creating a new array.
+
+Example:
+import numpy as np
+arr = np.array([10,20,30,40])
+print(arr + 5)
+
+Output:
+[15 25 35 45]
+
+2. Element-wise Operations
+
+arr + 10   -> Add 10 to every element
+arr - 1    -> Subtract 1 from every element
+arr * 2    -> Multiply every element
+arr / 2    -> Divide every element
+arr ** 2   -> Square each element
+arr ** 3   -> Cube each element
+
+3. Array + Array Operations
+
+a = np.array([1,2,3])
+b = np.array([10,20,30])
+
+a + b -> [11 22 33]
+a * b -> [10 40 90]
+
+4. 2D Arrays (Matrices)
+
+matrix = np.array([
+    [1,2,3],
+    [4,5,6]
+])
+
+shape -> (2,3)
+ndim  -> 2
+size  -> 6
+
+5. Indexing 2D Arrays
+
+matrix[row, column]
+
+matrix[0]     -> First row
+matrix[1]     -> Second row
+matrix[1,2]   -> 6
+matrix[:,1]   -> Second column
+matrix[0,:]   -> First row
+
+6. Matrix Operations
+
+A + B  -> Element-wise addition
+A * B  -> Element-wise multiplication
+A @ B  -> Matrix multiplication
+np.matmul(A,B) -> Matrix multiplication
+
+7. Useful Functions
+
+marks.shape
+marks.ndim
+marks.size
+marks.mean()
+marks.max()
+marks.min()
+
+8. Common Mistakes
+
+❌ marks[1] -> Second row
+✅ marks[:,1] -> Second column
+
+❌ A * B is NOT matrix multiplication.
+✅ A @ B or np.matmul(A,B) performs matrix multiplication.
