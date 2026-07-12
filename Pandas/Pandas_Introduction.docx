@@ -1,0 +1,54 @@
+Introduction to Pandas
+What is Pandas?
+Pandas is a Python library used for reading, cleaning, analyzing and manipulating structured data. It is widely used in Data Science, Machine Learning and AI.
+Import
+import pandas as pd
+NumPy vs Pandas
+NumPy works with arrays.
+Pandas works with tables (Series and DataFrames).
+Series
+A Series is a one-dimensional labeled array.
+Example:
+marks = pd.Series([85,90,88])
+DataFrame
+A DataFrame is a two-dimensional table.
+Example:
+df = pd.DataFrame({'Name':['Alice','Bob'],'Age':[20,21],'Marks':[85,90]})
+Useful Properties
+df.shape -> (rows, columns)
+df.columns -> Column names
+df.dtypes -> Data types
+Viewing Data
+df.head()
+df.head(2)
+df.tail()
+df.tail(2)
+Dataset Summary
+df.info() -> Dataset information
+df.describe() -> Statistical summary
+Selecting Columns
+df['Name'] -> Series
+df[['Name','Marks']] -> DataFrame
+Adding Columns
+df['City']='Chennai'
+Common Mistakes
+Use quotes around column names.
+Single brackets return a Series.
+Double brackets return a DataFrame.
+Interview Questions
+1. What is Pandas?
+2. Difference between Series and DataFrame?
+3. Difference between df['Age'] and df[['Age']]?
+4. What does shape return?
+5. What do head() and tail() do?
+Cheat Sheet
+pd.Series()
+pd.DataFrame()
+df.shape
+df.columns
+df.dtypes
+df.head()
+df.tail()
+df.info()
+df.describe()
+df['Column']
